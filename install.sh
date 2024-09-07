@@ -4,7 +4,12 @@
 # Sway Window Manager #
 #######################
 
-cp -r "./config" "$HOME/.config"
+if [ ! -d "$HOME/.config/sway/" ]; then
+	mkdir -p "$HOME/.config/sway"	
+fi
+cp -rf "./config/sway/config" "$HOME/.config/sway/config"
+cp -rf "./status-bar.sh" "$HOME/.config/sway/status-bar.sh"
+sudo chmod 744 "$HOME/.config/sway/status-bar.sh"
 
 sudo pacman -S sway swaylock swayidle swaybg dmenu wmenu polkit
 
