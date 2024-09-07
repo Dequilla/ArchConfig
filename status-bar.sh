@@ -1,6 +1,6 @@
 #!/bin/bash
 
-date_formatted=$(date "+%a %F %H:%M")
+date_formatted=$(date "+%a %F %H:%M:%S")
 
 linux_version=$(uname -r | cut -d '-' -f1)
 
