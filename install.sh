@@ -1,5 +1,10 @@
 #!/bin/bash
 
+skip_packages=0
+if [ "$1" = "skip" ]; then
+	skip_packages=1
+fi
+
 #######################
 # Sway Window Manager #
 #######################
@@ -11,7 +16,10 @@ cp -rf "./config/sway/config" "$HOME/.config/sway/config"
 cp -rf "./status-bar.sh" "$HOME/.config/sway/status-bar.sh"
 sudo chmod 744 "$HOME/.config/sway/status-bar.sh"
 
-sudo pacman -S sway swaylock swayidle swaybg dmenu wmenu polkit
+
+if [ $skip_packages -eq 0 ]; then
+	sudo pacman -S sway swaylock swayidle swaybg dmenu wmenu polkit
+fi
 
 if [ ! -f $HOME/.profile ]; then
 	touch $HOME/.profile
@@ -40,7 +48,9 @@ cp "./images/casper-van-battum-gotland-background.jpg" "$HOME/Images/Backgrounds
 # SDDM Login Manager #
 ######################
 
-sudo pacman -S sddm
+if [ $skip_packages -eq 0 ]; then
+	sudo pacman -S sddm
+fi
 
 sudo systemctl enable sddm.service
 
