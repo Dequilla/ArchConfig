@@ -13,7 +13,7 @@ if [ ! -d "$HOME/.config/sway/" ]; then
 	mkdir -p "$HOME/.config/sway"	
 fi
 cp -rf "./config/sway/config" "$HOME/.config/sway/config"
-cp -rf "./status-bar.sh" "$HOME/.config/sway/status-bar.sh"
+cp -rf "./scripts/status-bar.sh" "$HOME/.config/sway/status-bar.sh"
 sudo chmod 744 "$HOME/.config/sway/status-bar.sh"
 
 
@@ -42,7 +42,8 @@ if [ ! -d "$HOME/Images/Backgrounds" ]; then
 	mkdir -p "$HOME/Images/Backgrounds"
 fi
 echo "Adding background image to ~/Images/Backgrounds/"
-cp "./images/casper-van-battum-gotland-background.jpg" "$HOME/Images/Backgrounds/casper-van-battum-gotland-background.jpg"
+#cp "./images/casper-van-battum-gotland-background.jpg" "$HOME/Images/Backgrounds/casper-van-battum-gotland-background.jpg"
+cp "./images/joris-beugels-alaska.jpg" "$HOME/Images/Backgrounds/joris-beugels-alaska.jpg"
 
 ######################
 # SDDM Login Manager #

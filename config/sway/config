@@ -25,7 +25,7 @@ exec wl-paste -t text --watch clipman store --no-persist
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Images/Backgrounds/casper-van-battum-gotland-background.jpg fill
+output * bg ~/Images/Backgrounds/joris-beugels-alaska.jpg fill
 #
 # Example configuration:
 #
