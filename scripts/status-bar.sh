@@ -1,5 +1,13 @@
 #!/bin/bash
 
+bright_blue="#DAE2E3"
+sky_blue="#6995C6"
+yellow="#DFAB48"
+brown="#BC6927"
+green="#546022"
+white="#FFFFFF"
+black="#000000"
+
 protocol_version='{ "version": 1 }'
 
 echo "$protocol_version"
@@ -13,9 +21,9 @@ do
 {
 	"name": "Date and Time",
 	"full_text": " $date_formatted ",
-	"color": "#000000",
-	"background": "#ffffff",
-	"border": "#ffffff",
+	"color": "$black",
+	"background": "$sky_blue",
+	"border": "$sky_blue",
 	"separator": false,
 	"separator_block_width": 0
 }
@@ -27,9 +35,9 @@ EndOfString
 {
 	"name": "Kernel Version",
 	"full_text": " $linux_version ",
-	"color": "#ffffff",
-	"background": "#000000",
-	"border": "#000000",
+	"color": "$black",
+	"background": "$sky_blue",
+	"border": "$sky_blue",
 	"separator": false,
 	"separator_block_width": 0
 }
@@ -42,9 +50,9 @@ EndOfString
 {
 	"name": "Battery",
 	"full_text": " $battery_status at $battery_percent% ",
-	"color": "#ffffff",
-	"background": "#000000",
-	"border": "#000000",
+	"color": "$black",
+	"background": "$sky_blue",
+	"border": "$sky_blue",
 	"separator": false,
 	"separator_block_width": 0
 }

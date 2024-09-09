@@ -18,7 +18,7 @@ sudo chmod 744 "$HOME/.config/sway/status-bar.sh"
 
 
 if [ $skip_packages -eq 0 ]; then
-	sudo pacman -S sway swaylock swayidle swaybg dmenu wmenu polkit
+	sudo pacman -S sway swaylock swayidle swaybg dmenu wmenu polkit gcc
 fi
 
 if [ ! -f $HOME/.profile ]; then
