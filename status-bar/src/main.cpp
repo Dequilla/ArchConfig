@@ -5,6 +5,8 @@
 #include <thread>
 #include <ctime>
 
+#include <sys/utsname.h>
+
 #define bright_blue "#DAE2E3"
 #define sky_blue "#6995C6"
 #define yellow "#DFAB48"
@@ -58,7 +60,7 @@ std::string get_date_json()
 
     ss << "{";
     ss << "\"name\": \"Date and time\",";
-    ss << "\"full_text\": \"" << std::put_time(&local, "%d-%m-%Y %H-%M-%S") << "\",";
+    ss << "\"full_text\": \"" << std::put_time(&local, "%d-%m-%Y %H:%M:%S") << "\",";
     ss << "\"color\": \"" << bright_blue << "\",";
     ss << "\"background\": \"" << bright_blue << "\",";
     ss << "\"separator\": \"false\"";
@@ -69,7 +71,26 @@ std::string get_date_json()
 
 std::string get_kernel_json()
 {
-    return "{}";
+    utsname info;
+    if(uname(&info) == 0)
+    {
+        std::string version(info.release);
+
+        std::stringstream ss;
+        ss << "{";
+        ss << "\"name\": \"Date and time\",";
+        ss << "\"full_text\": \"" << version << "\",";
+        ss << "\"color\": \"" << bright_blue << "\",";
+        ss << "\"background\": \"" << bright_blue << "\",";
+        ss << "\"separator\": \"false\"";
+        ss << "}";
+
+        return ss.str();
+    }
+    else
+    {
+        return "Kernal Unknown.";
+    }
 }
 
 std::string get_battery_json()
