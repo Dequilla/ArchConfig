@@ -1,0 +1,2 @@
+# We dont want the updater binary. We build it where we need it
+status_bar_updater
