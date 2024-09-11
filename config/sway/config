@@ -217,7 +217,8 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command sh ~/.config/sway/status-bar.sh
+    # status_command sh ~/.config/sway/status-bar.sh
+    status_command exec ~/.config/sway/status_bar_updater
 
     colors {
         statusline #ffffff
