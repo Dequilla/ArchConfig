@@ -5,6 +5,11 @@ if [ "$1" = "skip" ]; then
 	skip_packages=1
 fi
 
+# Install all packages (if argument skip supplied we skip it, for speed)
+if [ $skip_packages -eq 0 ]; then
+	sh ./scripts/packages.sh
+fi
+
 #######################
 # Sway Window Manager #
 #######################
@@ -17,10 +22,6 @@ cp -rf "./config/sway/config" "$HOME/.config/sway/config"
 # sudo chmod 744 "$HOME/.config/sway/status-bar.sh"
 
 (cd ./status-bar/ && sh build.sh && cp -rf "./status_bar_updater" "$HOME/.config/sway/status_bar_updater")
-
-if [ $skip_packages -eq 0 ]; then
-	sudo pacman -S sway swaylock swayidle swaybg dmenu wmenu polkit gcc
-fi
 
 if [ ! -f $HOME/.profile ]; then
 	touch $HOME/.profile
@@ -49,10 +50,6 @@ cp "./images/joris-beugels-alaska.jpg" "$HOME/Images/Backgrounds/joris-beugels-a
 ######################
 # SDDM Login Manager #
 ######################
-
-if [ $skip_packages -eq 0 ]; then
-	sudo pacman -S sddm
-fi
 
 sudo systemctl enable sddm.service
 
