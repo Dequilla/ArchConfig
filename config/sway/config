@@ -95,6 +95,10 @@ input * {
     # Lock the computer
     bindsym $mod+Ctrl+l exec swaylock
 
+    # Change brightness of laptop screen
+    bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
 #
 # Moving around:
 #

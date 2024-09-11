@@ -8,6 +8,9 @@ fi
 # Install all packages (if argument skip supplied we skip it, for speed)
 if [ $skip_packages -eq 0 ]; then
 	sh ./scripts/packages.sh
+
+	# Install vim and my vim config
+	sh ./scripts/install-vim.sh
 fi
 
 #######################
@@ -18,8 +21,6 @@ if [ ! -d "$HOME/.config/sway/" ]; then
 	mkdir -p "$HOME/.config/sway"	
 fi
 cp -rf "./config/sway/config" "$HOME/.config/sway/config"
-# cp -rf "./scripts/status-bar.sh" "$HOME/.config/sway/status-bar.sh"
-# sudo chmod 744 "$HOME/.config/sway/status-bar.sh"
 
 (cd ./status-bar/ && sh build.sh && cp -rf "./status_bar_updater" "$HOME/.config/sway/status_bar_updater")
 

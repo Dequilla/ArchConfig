@@ -10,6 +10,6 @@ packages+=(sway swaylock swayidle swaybg dmenu wmenu polkit gcc)
 packages+=(sddm)
 
 # Utilities
-packages+=(vim tree)
+packages+=(vim tree vim brightnessctl)
 
 sudo pacman -S ${packages[@]}
