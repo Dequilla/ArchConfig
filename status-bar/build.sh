@@ -1,3 +1,3 @@
 name=status_bar_updater
 
-g++ src/main.cpp -o $name 
+g++ -03 src/main.cpp -o $name 
