@@ -59,3 +59,6 @@ if [[ -f "/etc/systemd/system/display-manager.service" ]]; then
 fi
 
 sudo ln -sf /usr/lib/systemd/system/sddm.service /etc/systemd/system/display-manager.service 
+
+# Fix wrong keyboard layout in sddm
+localectl set-x11-keymap --no-convert "se"
