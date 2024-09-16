@@ -9,6 +9,9 @@ packages+=(sway swaylock swayidle swaybg dmenu wmenu polkit gcc)
 # Login manager
 packages+=(sddm)
 
+# Fonts
+packages+=(noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra)
+
 # Utilities
 packages+=(vim tree vim brightnessctl)
 
