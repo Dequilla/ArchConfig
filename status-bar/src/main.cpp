@@ -80,10 +80,12 @@ std::string get_kernel_json()
     {
         std::string version(info.release);
 
+        std::string str( version.substr(0, version.find_first_of('-')) );
+
         std::stringstream ss;
         ss << "{";
         ss << "\"name\": \"Version\",";
-        ss << "\"full_text\": \" " << version << " \",";
+        ss << "\"full_text\": \" " << str << " \",";
         ss << "\"color\": \"" << black << "\",";
         ss << "\"background\": \"" << bright_blue << "\",";
         ss << "\"separator\": true,";
