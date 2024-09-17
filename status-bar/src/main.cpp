@@ -132,3 +132,12 @@ std::string get_battery_json()
     return ss.str();
 }
 
+std::vector<std::string> get_cpu_load_per_core()
+{
+    // 1. Read /proc/stat
+    // 2. Read all rows starting with cpu[x]
+    // 3. Save to static memory
+    // 4. Compare after x time
+    // LINK: https://stackoverflow.com/questions/3017162/how-to-get-total-cpu-usage-in-linux-using-c
+}
+
