@@ -63,7 +63,7 @@ std::string get_date_json()
 
     ss << "{";
     ss << "\"name\": \"Date and time\",";
-    ss << "\"full_text\": \" " << std::put_time(&local, "%d-%m-%Y %H:%M:%S") << " \",";
+    ss << "\"full_text\": \" " << std::put_time(&local, "%A %d-%m-%Y %H:%M:%S") << " \",";
     ss << "\"color\": \"" << black << "\",";
     ss << "\"background\": \"" << bright_blue << "\",";
     ss << "\"separator\": true,";
@@ -79,13 +79,12 @@ std::string get_kernel_json()
     if(uname(&info) == 0)
     {
         std::string version(info.release);
-
-        std::string str( version.substr(0, version.find_first_of('-')) );
+        version = version.substr(0, version.find_first_of('-'));
 
         std::stringstream ss;
         ss << "{";
         ss << "\"name\": \"Version\",";
-        ss << "\"full_text\": \" " << str << " \",";
+        ss << "\"full_text\": \" " << version << " \",";
         ss << "\"color\": \"" << black << "\",";
         ss << "\"background\": \"" << bright_blue << "\",";
         ss << "\"separator\": true,";
