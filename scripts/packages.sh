@@ -4,7 +4,7 @@
 packages=()
 
 # Sway window manager
-packages+=(sway swaylock swayidle swaybg dmenu wmenu polkit gcc)
+packages+=(sway swaylock swayidle swaybg dmenu wmenu polkit gcc keepassxc qt5-wayland)
 
 # Login manager
 packages+=(sddm)
