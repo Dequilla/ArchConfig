@@ -15,12 +15,14 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
+
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu "export LC_ALL=C; rofi -combi-modi window,drun,ssh,run -show combi -show-icons"
 
 exec wl-paste -t text --watch clipman store --no-persist
+
+# Statusbar
+exec waybar
 
 ### Output configuration
 #
@@ -211,24 +213,5 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    # status_command sh ~/.config/sway/status-bar.sh
-    status_command exec ~/.config/sway/status_bar_updater
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
 
 include /etc/sway/config.d/*

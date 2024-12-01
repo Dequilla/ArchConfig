@@ -20,10 +20,11 @@ fi
 if [ ! -d "$HOME/.config/sway/" ]; then
 	mkdir -p "$HOME/.config/sway"	
 fi
-cp -rf "./config/sway/config" "$HOME/.config/sway/config"
-cp -rf "./config/alacritty.toml" "$HOME/.config/alacritty.toml"
+# cp -rf "./config/sway/config" "$HOME/.config/sway/config"
+# cp -rf "./config/alacritty.toml" "$HOME/.config/alacritty.toml"
+cp -rf "./.config/" "$HOME/"
 
-(cd ./status-bar/ && sh build.sh && cp -rf "./status_bar_updater" "$HOME/.config/sway/status_bar_updater")
+# (cd ./status-bar/ && sh build.sh && cp -rf "./status_bar_updater" "$HOME/.config/sway/status_bar_updater")
 
 if [ ! -f $HOME/.profile ]; then
 	touch $HOME/.profile
