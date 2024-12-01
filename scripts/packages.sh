@@ -13,6 +13,6 @@ packages+=(sddm)
 packages+=(noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra)
 
 # Utilities
-packages+=(vim tree vim brightnessctl)
+packages+=(vim tree neovim brightnessctl yazi)
 
 sudo pacman -S ${packages[@]}
