@@ -10,7 +10,7 @@ if [ $skip_packages -eq 0 ]; then
 	sh ./scripts/packages.sh
 
 	# Install vim and my vim config
-	sh ./scripts/install-vim.sh
+	sh ./scripts/install-vim.sh 
 fi
 
 #######################
@@ -66,3 +66,5 @@ sudo ln -sf /usr/lib/systemd/system/sddm.service /etc/systemd/system/display-man
 
 # Fix wrong keyboard layout in sddm
 localectl set-x11-keymap --no-convert "se"
+
+sh ./scripts/sddm.sh
