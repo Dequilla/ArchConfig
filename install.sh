@@ -30,6 +30,8 @@ if [ ! -f $HOME/.profile ]; then
 	touch $HOME/.profile
 fi
 
+echo "export EDITOR=nvim"
+
 # Open sway after TTY login (when logged in in terminal)
 start_sway_commands='if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
 	exec sway

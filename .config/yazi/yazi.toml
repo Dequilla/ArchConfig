@@ -1,2 +1,10 @@
 [manager]
 show_hidden = true
+
+[opener]
+text-edit = [
+]
+
+[open]
+rules = [
+]
