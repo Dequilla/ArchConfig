@@ -4,15 +4,15 @@
 packages=()
 
 # Sway window manager
-packages+=(sway swaylock swayidle waybar swaybg polkit gcc keepassxc qt5-wayland)
+packages+=(sway swaylock swayidle waybar swaybg polkit gcc qt5-wayland)
 
 # Login manager
-packages+=(sddm)
+packages+=(sddm qt6-svg)
 
 # Fonts
 packages+=(noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra)
 
 # Utilities
-packages+=(tree neovim brightnessctl yazi)
+packages+=(tree neovim brightnessctl yazi grim slurp keepassxc)
 
 sudo pacman -S ${packages[@]}
