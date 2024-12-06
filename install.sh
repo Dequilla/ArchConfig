@@ -51,6 +51,8 @@ echo "Adding background image to ~/Images/Backgrounds/"
 #cp "./images/casper-van-battum-gotland-background.jpg" "$HOME/Images/Backgrounds/casper-van-battum-gotland-background.jpg"
 cp "./images/joris-beugels-alaska.jpg" "$HOME/Images/Backgrounds/joris-beugels-alaska.jpg"
 
+sh ./scripts/gtk.sh
+
 ######################
 # SDDM Login Manager #
 ######################
