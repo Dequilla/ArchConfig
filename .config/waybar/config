@@ -20,7 +20,7 @@
     "clock": {
         "timezone": "Europe/Stockholm",
         "format-alt": "{:%Y-%m-%d}",
-        "format": "{:%a %d %b %H:%M:%S}",
+        "format": "{:%a %d %b %H:%M}",
         "tooltip": false
     },
     "cpu": {
