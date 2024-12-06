@@ -61,14 +61,14 @@
     }, 
     "network": {
         "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt": "{icon}",
         "format-alt-click": "click-right",
         "format-icons": {
             "wifi": ["Wi-Fi ⚊", "Wi-Fi ⚌" ,"Wi-Fi ☰"],
             "ethernet": ["Ethernet"],
             "disconnected": ["No internet"]
         },
-        "on-click": "termite -e nmtui",
+        "on-click": "alacritty -e nmtui",
     "tooltip": false
     },
     "pulseaudio": {
