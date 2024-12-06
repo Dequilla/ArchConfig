@@ -26,6 +26,17 @@ output * bg ~/Images/Backgrounds/joris-beugels-alaska.jpg fill
 output HDMI-A-1 resolution 1920x1080 position -1920,0
 output eDP-1 resolution 1920x1080 position 0,0
 
+### Titlebar
+default_border pixel 2
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #697680 #697680 #ffffff #697680   #697680
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off
