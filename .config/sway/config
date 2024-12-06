@@ -22,7 +22,7 @@ set $menu "export LC_ALL=C; rofi -combi-modi window,drun,ssh,run -show combi -sh
 exec wl-paste -t text --watch clipman store --no-persist
 
 # Statusbar
-exec waybar
+exec sh ~/.config/waybar/waybar.sh
 
 ### Output configuration
 #
