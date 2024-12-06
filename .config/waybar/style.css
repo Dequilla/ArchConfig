@@ -45,6 +45,10 @@ window#waybar.solo {
     min-width:  25px;
 }
 
+#custom-weather, #network {
+    margin-top: 5px;
+}
+
 #clock {
     margin:     0px 16px 0px 10px;
     min-width:  140px;
