@@ -53,6 +53,12 @@ cp "./images/joris-beugels-alaska.jpg" "$HOME/Images/Backgrounds/joris-beugels-a
 
 sh ./scripts/gtk.sh
 
+# Install clipboard
+mkdir -p $HOME/tmp
+git clone https://aur.archlinux.org/clipman.git $HOME/clipman
+(cd $HOME/clipman && makepkg --syncdeps --install --rmdeps --clean)
+rm -rf $HOME/clipman
+
 ######################
 # SDDM Login Manager #
 ######################

@@ -6,6 +6,9 @@ packages=()
 # Sway window manager
 packages+=(sway swaylock swayidle waybar swaybg polkit gcc qt5-wayland)
 
+# For clipboard (clipman)
+packages+=(go wofi)
+
 # Login manager
 packages+=(sddm qt6-svg)
 
