@@ -19,7 +19,10 @@ set $menu "export LC_ALL=C; rofi -combi-modi window,drun,ssh,run -show combi -sh
 # exec wl-paste -t text --watch clipman store --no-persist
 exec wl-paste -n -t text --watch clipman store --no-persist --histpath="~/.cache/clipman.json" >> /tmp/clipman-log.txt 2>&1 &
 exec wl-paste -n -p -t text --watch clipman store --no-persist -P --histpath="~/.cache/clipman-primary.json" >> /tmp/clipman-log.txt 2>&1 &
-bindsym $mod+x exec clipman pick --tool wofi --histpath="~/.cache/clipman.json"
+bindsym $mod+x exec clipman pick --tool wofi --histpath="~/.cache/clipman.json" -T'-i'
+bindsym Ctrl+c exec wl-copy
+bindsym Ctrl+v exec wl-paste
+exec clipman restore
 
 # Statusbar
 exec sh ~/.config/waybar/waybar.sh
