@@ -32,6 +32,9 @@ output * bg ~/Images/Backgrounds/joris-beugels-alaska.jpg fill
 output HDMI-A-1 resolution 1920x1080 position -1920,0
 output eDP-1 resolution 1920x1080 position 0,0
 
+# Tell which window uses xwayland and which uses wayland for debugging
+for_window [shell="xwayland"] title_format "[XWayland] %title"
+
 ### Titlebar
 default_border pixel 2
 
